@@ -41,7 +41,7 @@ var d = new Date();
 var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 var hours = d.getHours();
-var ampm = hours >= 12 ? 'AM' : 'PM';
+var ampm = hours >= 12 ? 'PM' : 'AM';
 hours = (hours % 12 ) || 12;
 var dateTime = days[d.getDay()] + ', ' + months[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear() + ' ' + hours + ':' + d.getMinutes() + ' ' + ampm;
 document.querySelector('.current-time').innerHTML = dateTime;

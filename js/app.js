@@ -45,3 +45,14 @@ var ampm = hours >= 12 ? 'AM' : 'PM';
 hours = (hours % 12 ) || 12;
 var dateTime = days[d.getDay()] + ', ' + months[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear() + ' ' + hours + ':' + d.getMinutes() + ' ' + ampm;
 document.querySelector('.current-time').innerHTML = dateTime;
+
+// Search 
+
+document.querySelector('.search-form').addEventListener('submit', function(e){
+    e.preventDefault();
+
+    var search = document.querySelector('input[name="search"]').value;
+    if (search.length > 0){
+        window.location.href = 'https://www.google.com/search?q=' + search;
+    }
+});
